@@ -375,22 +375,42 @@
   padding: 0 2rem;
 }
 
-.featured-car-image {
+.bugattiLaVoiture-image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.featured-car-image img {
-  max-width: 100%;
+.Ferrari-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; /* Additional spacing to move Ferrari image lower */
+}
+
+.bugattiLaVoiture-image img {
+  max-width: 125%;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
   transition: transform 0.5s ease;
 }
+.Ferrari-image img {
+  max-width: 110%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  transition: transform 0.5s ease;
+  margin-top: 70px; /* Move the Ferrari car image lower */
+  margin-left: -120px; /* Move the Ferrari car image to the right */
+}
 
-.featured-car-image img:hover {
+.Ferrari-image img:hover {
+  transform: scale(1.03);
+}
+.bugattiLaVoiture-image img:hover {
   transform: scale(1.03);
 }
 

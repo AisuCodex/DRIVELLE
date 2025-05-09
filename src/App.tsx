@@ -93,7 +93,7 @@ function App() {
       {/* Featured Car Section - Bugatti */}
       <section className="featured-car">
         <div className="featured-car-content">
-          <div className="featured-car-image">
+          <div className="bugattiLaVoiture-image">
             <img src={bugattiLaVoiture} alt="Bugatti La Voiture Noire" />
           </div>
           <div className="featured-car-info">
@@ -118,7 +118,7 @@ function App() {
             </p>
             <button className="gallery-button">GO TO GALLERY</button>
           </div>
-          <div className="featured-car-image">
+          <div className="Ferrari-image">
             <img src={ferrari812} alt="Ferrari 812 Competizione" />
           </div>
         </div>
