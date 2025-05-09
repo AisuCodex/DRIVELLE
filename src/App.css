@@ -132,32 +132,229 @@
 
 /* Brand Logos Section */
 .brand-logos {
-  background-color: var(--dark-bg);
-  padding: 2rem 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), var(--dark-bg));
+  padding: 3rem 0;
   margin-top: -8rem; /* Move the logos section up */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 5;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.brand-logos::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
 }
 
 .logo-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 0 2rem;
+  padding: 2.5rem;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(20, 20, 20, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.03),
+    transparent
+  );
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    rgba(30, 30, 30, 0.6),
+    rgba(10, 10, 10, 0.8)
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom left,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+.logo-wrapper:hover {
+  transform: scale(1.15) translateY(-5px);
+  background: linear-gradient(
+    145deg,
+    rgba(40, 40, 40, 0.7),
+    rgba(20, 20, 20, 0.9)
+  );
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4),
+    inset 0 2px 2px rgba(255, 255, 255, 0.1);
 }
 
 .brand-logo {
-  height: 50px;
-  width: auto;
+  max-height: 55px;
+  max-width: 55px;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: brightness(0.9) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transform: translateY(0);
+  opacity: 0.9;
 }
 
-.brand-logo:hover {
-  transform: scale(1.1);
+.logo-wrapper:hover .brand-logo {
+  filter: brightness(1.2) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.logo-wrapper:hover .lamborghini-logo {
+  filter: brightness(1.4) saturate(1.4) contrast(1.15)
+    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+  transform: scale(1.5) translateY(-2px);
+}
+
+/* Individual logo adjustments */
+.bugatti-wrapper {
+  z-index: 10;
+}
+
+.bugatti-logo {
+  max-height: 100px;
+  max-width: 90px;
+  filter: brightness(1.2) saturate(1.2)
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.5);
+}
+
+.logo-wrapper:hover .bugatti-logo {
+  filter: brightness(1.4) saturate(1.3)
+    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+  transform: scale(1.5) translateY(-2px);
+}
+
+.ferrari-wrapper,
+.rolls-royce-wrapper,
+.bmw-wrapper {
+  z-index: 10;
+}
+
+.ferrari-logo {
+  max-height: 80px;
+  max-width: 75px;
+  filter: saturate(1.2) brightness(1.1)
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.5);
+}
+
+.logo-wrapper:hover .ferrari-logo {
+  filter: brightness(1.3) saturate(1.3)
+    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+  transform: scale(1.5) translateY(-2px);
+}
+
+.rolls-royce-logo {
+  max-height: 85px;
+  max-width: 67px;
+  filter: brightness(1.2) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.5);
+}
+
+.logo-wrapper:hover .rolls-royce-logo {
+  filter: brightness(1.4) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+  transform: scale(1.5) translateY(-2px);
+}
+
+.bmw-logo {
+  max-height: 65px;
+  max-width: 69px;
+  filter: brightness(1.1) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.2);
+}
+
+.logo-wrapper:hover .bmw-logo {
+  filter: brightness(1.3) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+  transform: scale(1.2) translateY(-2px);
+}
+
+.lamborghini-wrapper {
+  height: 110px;
+  width: 110px;
+  background: linear-gradient(
+    145deg,
+    rgba(35, 35, 35, 0.7),
+    rgba(15, 15, 15, 0.9)
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.lamborghini-wrapper:hover {
+  transform: scale(1.15) translateY(-5px);
+  background: linear-gradient(
+    145deg,
+    rgba(45, 45, 45, 0.8),
+    rgba(25, 25, 25, 1)
+  );
+}
+
+.lamborghini-logo {
+  max-height: 90px;
+  max-width: 130px;
+  filter: brightness(1.2) saturate(1.3) contrast(1.1)
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.5);
 }

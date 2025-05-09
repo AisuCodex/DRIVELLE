@@ -1,5 +1,5 @@
 import './App.css';
-import bugatti from './assets/cars/Bugatti img.png';
+import bugatti from './assets/cars/Bugatti img (1).png';
 import bugattiLogo from './assets/cars/Bugatti Logo.png';
 import ferrariLogo from './assets/cars/Ferrari Logo.png';
 import rollsRoyceLogo from './assets/cars/Rolls Royce Logo.png';
@@ -54,19 +54,37 @@ function App() {
       {/* Brand Logos Section */}
       <section className="brand-logos">
         <div className="logo-container">
-          <img src={bugattiLogo} alt="Bugatti Logo" className="brand-logo" />
-          <img src={ferrariLogo} alt="Ferrari Logo" className="brand-logo" />
-          <img
-            src={rollsRoyceLogo}
-            alt="Rolls Royce Logo"
-            className="brand-logo"
-          />
-          <img src={bmwLogo} alt="BMW Logo" className="brand-logo" />
-          <img
-            src={lamborghiniLogo}
-            alt="Lamborghini Logo"
-            className="brand-logo"
-          />
+          <div className="logo-wrapper bugatti-wrapper">
+            <img
+              src={bugattiLogo}
+              alt="Bugatti Logo"
+              className="brand-logo bugatti-logo"
+            />
+          </div>
+          <div className="logo-wrapper ferrari-wrapper">
+            <img
+              src={ferrariLogo}
+              alt="Ferrari Logo"
+              className="brand-logo ferrari-logo"
+            />
+          </div>
+          <div className="logo-wrapper rolls-royce-wrapper">
+            <img
+              src={rollsRoyceLogo}
+              alt="Rolls Royce Logo"
+              className="brand-logo rolls-royce-logo"
+            />
+          </div>
+          <div className="logo-wrapper bmw-wrapper">
+            <img src={bmwLogo} alt="BMW Logo" className="brand-logo bmw-logo" />
+          </div>
+          <div className="logo-wrapper lamborghini-wrapper">
+            <img
+              src={lamborghiniLogo}
+              alt="Lamborghini Logo"
+              className="brand-logo lamborghini-logo"
+            />
+          </div>
         </div>
       </section>
     </div>
