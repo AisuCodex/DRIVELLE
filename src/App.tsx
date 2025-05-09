@@ -1,5 +1,10 @@
 import './App.css';
 import bugatti from './assets/cars/Bugatti img.png';
+import bugattiLogo from './assets/cars/Bugatti Logo.png';
+import ferrariLogo from './assets/cars/Ferrari Logo.png';
+import rollsRoyceLogo from './assets/cars/Rolls Royce Logo.png';
+import bmwLogo from './assets/cars/BMW Logo.png';
+import lamborghiniLogo from './assets/cars/Lamborghini Logo.png';
 
 function App() {
   return (
@@ -43,6 +48,25 @@ function App() {
               strokeLinejoin="round"
             />
           </svg>
+        </div>
+      </section>
+
+      {/* Brand Logos Section */}
+      <section className="brand-logos">
+        <div className="logo-container">
+          <img src={bugattiLogo} alt="Bugatti Logo" className="brand-logo" />
+          <img src={ferrariLogo} alt="Ferrari Logo" className="brand-logo" />
+          <img
+            src={rollsRoyceLogo}
+            alt="Rolls Royce Logo"
+            className="brand-logo"
+          />
+          <img src={bmwLogo} alt="BMW Logo" className="brand-logo" />
+          <img
+            src={lamborghiniLogo}
+            alt="Lamborghini Logo"
+            className="brand-logo"
+          />
         </div>
       </section>
     </div>
