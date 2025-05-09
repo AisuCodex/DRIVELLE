@@ -358,3 +358,105 @@
     drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
   transform: scale(1.5);
 }
+
+/* Featured Car Section */
+.featured-car {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 5rem 0;
+  margin-top: 3rem;
+}
+
+.featured-car-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.featured-car-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-car-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  transition: transform 0.5s ease;
+}
+
+.featured-car-image img:hover {
+  transform: scale(1.03);
+}
+
+.featured-car-info {
+  flex: 1;
+  padding: 0 3rem;
+  color: #fff;
+}
+
+.featured-car-info h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #fff, #d9d9d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.featured-car-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #d9d9d9;
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+
+.gallery-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ferrari Section Specific Styles */
+.ferrari-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  margin-top: 0;
+  padding: 6rem 0;
+}
+
+.featured-car-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.ferrari-title {
+  background: linear-gradient(90deg, #ff2800, #d9d9d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 40, 0, 0.15);
+}

@@ -5,6 +5,8 @@ import ferrariLogo from './assets/cars/Ferrari Logo.png';
 import rollsRoyceLogo from './assets/cars/Rolls Royce Logo.png';
 import bmwLogo from './assets/cars/BMW Logo.png';
 import lamborghiniLogo from './assets/cars/Lamborghini Logo.png';
+import bugattiLaVoiture from './assets/cars/Bugatti La Voiture Noire.png';
+import ferrari812 from './assets/cars/Ferrari 812 Superfast Italian.png';
 
 function App() {
   return (
@@ -84,6 +86,40 @@ function App() {
               alt="Lamborghini Logo"
               className="brand-logo lamborghini-logo"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Car Section - Bugatti */}
+      <section className="featured-car">
+        <div className="featured-car-content">
+          <div className="featured-car-image">
+            <img src={bugattiLaVoiture} alt="Bugatti La Voiture Noire" />
+          </div>
+          <div className="featured-car-info">
+            <h2>Bugatti La Voiture Noire</h2>
+            <p>
+              One of a kind hyper-GT with an art-deco soul. Smooth curves,
+              massive presence, and luxurious blacked-out mystique.
+            </p>
+            <button className="gallery-button">GO TO GALLERY</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Car Section - Ferrari */}
+      <section className="featured-car ferrari-section">
+        <div className="featured-car-content">
+          <div className="featured-car-info">
+            <h2 className="ferrari-title">Ferrari 812 Competizione</h2>
+            <p>
+              A sculpted grand tourer with aggressive styling and racing soul
+              designed to command attention.
+            </p>
+            <button className="gallery-button">GO TO GALLERY</button>
+          </div>
+          <div className="featured-car-image">
+            <img src={ferrari812} alt="Ferrari 812 Competizione" />
           </div>
         </div>
       </section>
