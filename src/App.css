@@ -137,19 +137,31 @@
 }
 
 .explore-button {
-  background-color: var(--light-gray);
-  color: var(--dark-bg);
-  padding: 0.8rem 2rem;
-  border-radius: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
   border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .explore-button:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.explore-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-indicator {
