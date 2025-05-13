@@ -706,6 +706,8 @@
   color: #fff;
   border: 1px solid rgba(42, 59, 76, 0.9);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10; /* Higher z-index to ensure button is clickable */
 }
 
 .rollsroyce-section .gallery-button:hover {
@@ -724,20 +726,25 @@
 }
 
 .rollsroyce-image img {
-  max-width: 160%;
+  max-width: 160%; /* Reduced from 160% to 140% */
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
   transition: transform 0.5s ease, filter 0.5s ease;
   max-height: 100vh;
-  margin-left: -25%;
+  margin-left: -35%; /* Moved further left */
   margin-bottom: 100px;
-  z-index: 5;
+  z-index: 3; /* Reduced z-index */
 }
 
 .rollsroyce-image img:hover {
   transform: scale(1.01);
   filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
+}
+
+.rollsroyce-text {
+  position: relative;
+  z-index: 10; /* Higher z-index to ensure text and buttons are above the image */
 }
 
 .rollsroyce-text p {
@@ -924,6 +931,7 @@
   padding: 0 3rem;
   color: #fff;
   max-width: 35%;
+  margin-left: 50px;
 }
 .featured-car-info-lambo h2 {
   font-size: 3rem;
@@ -1082,7 +1090,7 @@
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-  z-index: 1000;
+  z-index: 9999; /* Extremely high z-index to ensure it's above everything */
   animation: fadeIn 0.3s ease-in-out;
 }
 
