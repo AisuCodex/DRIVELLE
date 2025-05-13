@@ -736,6 +736,7 @@
   transition: transform 0.5s ease, filter 0.5s ease;
   max-height: 100vh;
   margin-left: -25%;
+  margin-bottom: 100px;
   z-index: 5;
 }
 
@@ -826,8 +827,8 @@
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
   transition: transform 0.5s ease, filter 0.5s ease;
   max-height: 100vh;
-  margin-top: 70px;
-  margin-left: -120px;
+  margin-left: -160px;
+  margin-bottom: 140px;
   z-index: 5;
 }
 
@@ -839,4 +840,112 @@
 .bmw-text p {
   color: #d9d9d9;
   font-weight: 500;
+}
+
+/* Lamborghini Section Specific Styles */
+.lamborghini-section {
+  background: linear-gradient(135deg, #25cf12 0%, #0e5c06 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.lamborghini-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(37, 207, 18, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 70%
+  );
+  z-index: 1;
+}
+
+.lamborghini-section .featured-car-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed from flex-start to space-between */
+  padding: 0 5%; /* Increased padding for better spacing */
+}
+
+.lamborghini-section h2 {
+  background: linear-gradient(90deg, #fff, #d9d9d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.lamborghini-section .gallery-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lamborghini-section .gallery-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.lamborghiniRevuelto-image {
+  flex: 1.5; /* Reduced from 2 to 1.5 to make the image section slightly smaller */
+  display: flex;
+  justify-content: center; /* Changed from flex-start to center */
+  align-items: center;
+  height: 100vh;
+  overflow: visible;
+}
+
+.lamborghiniRevuelto-image img {
+  max-width: 110%; /* Increased from 100% to 110% to make the car image larger */
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s ease, filter 0.5s ease;
+  max-height: 100vh;
+  margin-left: 0; /* Adjusted to center the car better */
+  margin-right: 50px;
+  z-index: 5;
+}
+
+.lamborghiniRevuelto-image img:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
+}
+.featured-car-info-lambo {
+  padding: 0 3rem;
+  color: #fff;
+  max-width: 35%;
+}
+.featured-car-info-lambo h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #fff, #d9d9d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.featured-car-info-lambo p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #d9d9d9;
+  margin-bottom: 2rem;
+  max-width: 90%;
 }

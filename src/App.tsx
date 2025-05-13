@@ -9,6 +9,7 @@ import lamborghiniLogo from './assets/cars/Lamborghini Logo.png';
 import bugattiLaVoiture from './assets/cars/Bugatti La Voiture Noire.png';
 import rollsRoycePhantom from './assets/cars/Rolls Royce Phantom.png';
 import bmwGranCoupe from './assets/cars/Coupe BMW Gran.png';
+import lamborghiniRevuelto from './assets/cars/Lamborghini Revuelto.png';
 
 function App() {
   return (
@@ -176,6 +177,23 @@ function App() {
           </div>
           <div className="bmw-image">
             <img src={bmwGranCoupe} alt="BMW 8 Series Gran Coupe" />
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Car Section - Lamborghini */}
+      <section className="featured-car lamborghini-section">
+        <div className="featured-car-content">
+          <div className="lamborghiniRevuelto-image">
+            <img src={lamborghiniRevuelto} alt="Lamborghini Revuelto" />
+          </div>
+          <div className="featured-car-info-lambo">
+            <h2>Lamborghini Revuelto</h2>
+            <p>
+              V12 hybrid masterpiece with jet-inspired edges, dramatic lines,
+              and a commanding road presence that redefines futuristic elegance.
+            </p>
+            <button className="gallery-button">GO TO GALLERY</button>
           </div>
         </div>
       </section>
