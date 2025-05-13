@@ -115,7 +115,7 @@ function App() {
       </section>
 
       {/* Featured Car Section - Bugatti */}
-      <section className="featured-car">
+      <section className="featured-car bugatti-section">
         <div className="featured-car-content">
           <div className="bugattiLaVoiture-image">
             <img src={bugattiLaVoiture} alt="Bugatti La Voiture Noire" />
