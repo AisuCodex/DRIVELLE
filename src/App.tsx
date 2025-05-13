@@ -197,6 +197,42 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-logo">DRIVELLE</div>
+          <div className="footer-tagline">
+            Experience the elegance of high-performance engineering and timeless
+            luxury at every mile.
+          </div>
+          <div className="footer-links">
+            <a href="#">About</a>
+            <a href="#">Cars</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">FAQs</a>
+          </div>
+          <div className="footer-social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+          </div>
+          <div className="footer-subscribe">
+            Subscribe to get exclusive updates{' '}
+            <input type="email" placeholder="Email address" />{' '}
+            <button>Submit</button>
+          </div>
+          <div className="footer-copyright">
+            © 2023 Drivelle. All rights reserved.
+          </div>
+          <div className="back-to-top">
+            <a href="#" aria-label="Back to top">
+              ↑
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
