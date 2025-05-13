@@ -30,6 +30,79 @@
   gap: 2rem;
 }
 
+/* Navigation link animations */
+.nav-links a {
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--light-gray), #d9d9d9);
+  transition: width 0.3s ease;
+  transform-origin: left;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+  animation: navLinkGlow 1.5s infinite alternate;
+}
+
+.nav-links a:active {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes navLinkGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Navigation link entrance animation */
+.nav-link-animate {
+  animation: fadeInDown 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Hero Section */
 .hero {
   position: relative;

@@ -15,10 +15,34 @@ function App() {
       <header className="header">
         <div className="logo">DRIVELLE</div>
         <nav className="nav-links">
-          <a href="#">About</a>
-          <a href="#">Cars</a>
-          <a href="#">Contact</a>
-          <a href="#">Logout</a>
+          <a
+            href="#"
+            className="nav-link-animate"
+            style={{ animationDelay: '0.1s' }}
+          >
+            About
+          </a>
+          <a
+            href="#"
+            className="nav-link-animate"
+            style={{ animationDelay: '0.2s' }}
+          >
+            Cars
+          </a>
+          <a
+            href="#"
+            className="nav-link-animate"
+            style={{ animationDelay: '0.3s' }}
+          >
+            Contact
+          </a>
+          <a
+            href="#"
+            className="nav-link-animate"
+            style={{ animationDelay: '0.4s' }}
+          >
+            Logout
+          </a>
         </nav>
       </header>
 
