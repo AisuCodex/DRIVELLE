@@ -99,31 +99,71 @@ function App() {
       {/* Brand Logos Section */}
       <section className="brand-logos">
         <div className="logo-container">
-          <div className="logo-wrapper bugatti-wrapper">
+          <div
+            className="logo-wrapper bugatti-wrapper"
+            onClick={() => {
+              document
+                .getElementById('bugatti')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{ cursor: 'pointer' }}
+          >
             <img
               src={bugattiLogo}
               alt="Bugatti Logo"
               className="brand-logo bugatti-logo"
             />
           </div>
-          <div className="logo-wrapper ferrari-wrapper">
+          <div
+            className="logo-wrapper ferrari-wrapper"
+            onClick={() => {
+              document
+                .getElementById('ferrari')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{ cursor: 'pointer' }}
+          >
             <img
               src={ferrariLogo}
               alt="Ferrari Logo"
               className="brand-logo ferrari-logo"
             />
           </div>
-          <div className="logo-wrapper rolls-royce-wrapper">
+          <div
+            className="logo-wrapper rolls-royce-wrapper"
+            onClick={() => {
+              document
+                .getElementById('rollsroyce')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{ cursor: 'pointer' }}
+          >
             <img
               src={rollsRoyceLogo}
               alt="Rolls Royce Logo"
               className="brand-logo rolls-royce-logo"
             />
           </div>
-          <div className="logo-wrapper bmw-wrapper">
+          <div
+            className="logo-wrapper bmw-wrapper"
+            onClick={() => {
+              document
+                .getElementById('bmw')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{ cursor: 'pointer' }}
+          >
             <img src={bmwLogo} alt="BMW Logo" className="brand-logo bmw-logo" />
           </div>
-          <div className="logo-wrapper lamborghini-wrapper">
+          <div
+            className="logo-wrapper lamborghini-wrapper"
+            onClick={() => {
+              document
+                .getElementById('lamborghini')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{ cursor: 'pointer' }}
+          >
             <img
               src={lamborghiniLogo}
               alt="Lamborghini Logo"
@@ -134,7 +174,7 @@ function App() {
       </section>
 
       {/* Featured Car Section - Bugatti */}
-      <section className="featured-car bugatti-section">
+      <section id="bugatti" className="featured-car bugatti-section">
         <div className="featured-car-content">
           <div className="bugattiLaVoiture-image">
             <img src={bugattiLaVoiture} alt="Bugatti La Voiture Noire" />
@@ -151,7 +191,7 @@ function App() {
       </section>
 
       {/* Featured Car Section - Ferrari */}
-      <section className="featured-car ferrari-section">
+      <section id="ferrari" className="featured-car ferrari-section">
         <div className="featured-car-content">
           <div className="featured-car-info">
             <h2 className="ferrari-title">Ferrari 812 Competizione</h2>
@@ -167,7 +207,7 @@ function App() {
         </div>
       </section>
       {/* Featured Car Section - Rolls Royce */}
-      <section className="featured-car rollsroyce-section">
+      <section id="rollsroyce" className="featured-car rollsroyce-section">
         <div className="featured-car-content">
           <div className="rollsroyce-image">
             <img src={rollsRoycePhantom} alt="Rolls Royce Phantom" />
@@ -184,7 +224,7 @@ function App() {
       </section>
 
       {/* Featured Car Section - BMW */}
-      <section className="featured-car bmw-section">
+      <section id="bmw" className="featured-car bmw-section">
         <div className="featured-car-content">
           <div className="featured-car-info bmw-text">
             <h2 className="bmw-title">BMW 8 Series Gran Coupe</h2>
@@ -198,7 +238,7 @@ function App() {
       </section>
 
       {/* Featured Car Section - Lamborghini */}
-      <section className="featured-car lamborghini-section">
+      <section id="lamborghini" className="featured-car lamborghini-section">
         <div className="featured-car-content">
           <div className="lamborghiniRevuelto-image">
             <img src={lamborghiniRevuelto} alt="Lamborghini Revuelto" />
