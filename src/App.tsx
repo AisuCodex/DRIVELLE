@@ -8,6 +8,7 @@ import bmwLogo from './assets/cars/BMW Logo.png';
 import lamborghiniLogo from './assets/cars/Lamborghini Logo.png';
 import bugattiLaVoiture from './assets/cars/Bugatti La Voiture Noire.png';
 import rollsRoycePhantom from './assets/cars/Rolls Royce Phantom.png';
+import bmwGranCoupe from './assets/cars/Coupe BMW Gran.png';
 
 function App() {
   return (
@@ -161,6 +162,20 @@ function App() {
               whisper-quiet performance, and regal presence.
             </p>
             <button className="gallery-button">GO TO GALLERY</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Car Section - BMW */}
+      <section className="featured-car bmw-section">
+        <div className="featured-car-content">
+          <div className="featured-car-info bmw-text">
+            <h2 className="bmw-title">BMW 8 Series Gran Coupe</h2>
+            <p>A perfect blend of luxury GT design and sporty aggression.</p>
+            <button className="gallery-button">GO TO GALLERY</button>
+          </div>
+          <div className="bmw-image">
+            <img src={bmwGranCoupe} alt="BMW 8 Series Gran Coupe" />
           </div>
         </div>
       </section>
