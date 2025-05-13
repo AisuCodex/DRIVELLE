@@ -35,9 +35,10 @@
 .nav-links a {
   position: relative;
   padding: 0.5rem 0;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   font-weight: 500;
   letter-spacing: 0.5px;
+  opacity: 0.8;
 }
 
 .nav-links a::before {
@@ -54,37 +55,24 @@
 
 .nav-links a:hover {
   color: white;
+  opacity: 1;
 }
 
 .nav-links a:hover::before {
   width: 100%;
-  animation: navLinkGlow 1.5s infinite alternate;
+}
+
+/* This ensures the underline doesn't stay after clicking */
+.nav-links a:active::before {
+  width: 0;
 }
 
 .nav-links a:active {
-  animation: pulse 0.3s ease;
+  opacity: 1;
+  color: white;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.97);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes navLinkGlow {
-  0% {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  }
-}
+/* Navigation animations removed in favor of opacity changes */
 
 /* Navigation link entrance animation */
 .nav-link-animate {

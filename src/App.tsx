@@ -19,28 +19,44 @@ function App() {
         <div className="logo">DRIVELLE</div>
         <nav className="nav-links">
           <a
-            href="#"
+            href="javascript:void(0)"
+            onClick={(e) => {
+              e.preventDefault();
+              // Just change opacity without active class
+            }}
             className="nav-link-animate"
             style={{ animationDelay: '0.1s' }}
           >
             About
           </a>
           <a
-            href="#"
+            href="javascript:void(0)"
+            onClick={(e) => {
+              e.preventDefault();
+              // Just change opacity without active class
+            }}
             className="nav-link-animate"
             style={{ animationDelay: '0.2s' }}
           >
             Cars
           </a>
           <a
-            href="#"
+            href="javascript:void(0)"
+            onClick={(e) => {
+              e.preventDefault();
+              // Just change opacity without active class
+            }}
             className="nav-link-animate"
             style={{ animationDelay: '0.3s' }}
           >
             Contact
           </a>
           <a
-            href="#"
+            href="javascript:void(0)"
+            onClick={(e) => {
+              e.preventDefault();
+              // Just change opacity without active class
+            }}
             className="nav-link-animate"
             style={{ animationDelay: '0.4s' }}
           >
@@ -207,16 +223,32 @@ function App() {
             luxury at every mile.
           </div>
           <div className="footer-links">
-            <a href="#">About</a>
-            <a href="#">Cars</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">FAQs</a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              About
+            </a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              Cars
+            </a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              Contact
+            </a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              Privacy Policy
+            </a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              FAQs
+            </a>
           </div>
           <div className="footer-social">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              Facebook
+            </a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              Instagram
+            </a>
+            <a href="javascript:void(0)" onClick={(e) => e.preventDefault()}>
+              YouTube
+            </a>
           </div>
           <div className="footer-subscribe">
             Subscribe to get exclusive updates{' '}
@@ -224,10 +256,17 @@ function App() {
             <button>Submit</button>
           </div>
           <div className="footer-copyright">
-            © 2023 Drivelle. All rights reserved.
+            © 2025 Drivelle. All rights reserved.
           </div>
           <div className="back-to-top">
-            <a href="#" aria-label="Back to top">
+            <a
+              href="javascript:void(0)"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              aria-label="Back to top"
+            >
               ↑
             </a>
           </div>
