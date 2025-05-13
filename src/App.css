@@ -662,7 +662,7 @@
 
 /* Rolls Royce Section Specific Styles */
 .rollsroyce-section {
-  background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #feffff 0%, #a8b5b9 100%);
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -681,8 +681,8 @@
   bottom: 0;
   background: radial-gradient(
     circle at 30% 50%,
-    rgba(44, 62, 80, 0.8) 0%,
-    rgba(0, 0, 0, 0.5) 70%
+    rgba(254, 255, 255, 0.8) 0%,
+    rgba(168, 181, 185, 0.5) 70%
   );
   z-index: 1;
 }
@@ -700,22 +700,23 @@
 }
 
 .rollsroyce-section h2 {
-  background: linear-gradient(90deg, #fff, #d9d9d9);
+  background: linear-gradient(90deg, #1a1a1a, #2c3e50);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .rollsroyce-section .gallery-button {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(42, 59, 76, 0.8);
+  color: #fff;
+  border: 1px solid rgba(42, 59, 76, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .rollsroyce-section .gallery-button:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  background-color: rgba(26, 37, 47, 0.9);
+  border: 1px solid rgba(26, 37, 47, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .rollsroyce-image {
@@ -728,7 +729,7 @@
 }
 
 .rollsroyce-image img {
-  max-width: 150%;
+  max-width: 160%;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
@@ -741,4 +742,9 @@
 .rollsroyce-image img:hover {
   transform: scale(1.01);
   filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
+}
+
+.rollsroyce-text p {
+  color: #2c3e50;
+  font-weight: 500;
 }

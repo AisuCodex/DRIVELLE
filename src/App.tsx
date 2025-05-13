@@ -154,7 +154,7 @@ function App() {
           <div className="rollsroyce-image">
             <img src={rollsRoycePhantom} alt="Rolls Royce Phantom" />
           </div>
-          <div className="featured-car-info">
+          <div className="featured-car-info rollsroyce-text">
             <h2>Rolls Royce Phantom</h2>
             <p>
               The epitome of automotive luxury with unparalleled craftsmanship,
