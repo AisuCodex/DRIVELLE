@@ -1,4 +1,5 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import ferrari812 from './assets/cars/Ferrari 812 Superfast Italian.png';
 import bugatti from './assets/cars/Bugatti img (1).png';
 import bugattiLogo from './assets/cars/Bugatti Logo.png';
@@ -12,6 +13,24 @@ import bmwGranCoupe from './assets/cars/Coupe BMW Gran.png';
 import lamborghiniRevuelto from './assets/cars/Lamborghini Revuelto.png';
 
 function App() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show back-to-top button when scrolled down more than the viewport height
+      setShowBackToTop(window.scrollY > window.innerHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check
+    handleScroll();
+
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div className="app-container">
       {/* Header/Navigation */}
@@ -255,6 +274,22 @@ function App() {
       </section>
 
       {/* Footer Section */}
+      {/* Fixed Back to Top Button */}
+      {showBackToTop && (
+        <div className="fixed-back-to-top">
+          <a
+            href="javascript:void(0)"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            aria-label="Back to top"
+          >
+            ↑
+          </a>
+        </div>
+      )}
+
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-logo">DRIVELLE</div>
@@ -297,18 +332,6 @@ function App() {
           </div>
           <div className="footer-copyright">
             © 2025 Drivelle. All rights reserved.
-          </div>
-          <div className="back-to-top">
-            <a
-              href="javascript:void(0)"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              aria-label="Back to top"
-            >
-              ↑
-            </a>
           </div>
         </div>
       </footer>
