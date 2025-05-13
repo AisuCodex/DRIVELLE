@@ -497,6 +497,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
+  height: 100vh;
 }
 
 .bugattiLaVoiture-image {
@@ -509,11 +510,13 @@
 }
 
 .Ferrari-image {
-  flex: 1;
+  flex: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px; /* Additional spacing to move Ferrari image lower */
+  overflow: visible;
+  height: 100vh;
 }
 
 .bugattiLaVoiture-image img {
@@ -527,17 +530,20 @@
   z-index: 5;
 }
 .Ferrari-image img {
-  max-width: 110%;
+  max-width: 105%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
-  transition: transform 0.5s ease;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s ease, filter 0.5s ease;
+  max-height: 100vh;
   margin-top: 70px; /* Move the Ferrari car image lower */
-  margin-left: -120px; /* Move the Ferrari car image to the right */
+  margin-left: -120px; /* Keep the Ferrari car image in the same position */
+  z-index: 5;
 }
 
 .Ferrari-image img:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
 }
 .bugattiLaVoiture-image img:hover {
   transform: scale(1.01);
@@ -594,20 +600,60 @@
 
 /* Ferrari Section Specific Styles */
 .ferrari-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  background: linear-gradient(135deg, #d4b159 0%, #8a7339 100%);
   margin-top: 0;
-  padding: 6rem 0;
+  padding: 0;
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.featured-car-content.reverse {
-  flex-direction: row-reverse;
+.ferrari-section .gallery-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ferrari-section .gallery-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.ferrari-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 50%,
+    rgba(212, 177, 89, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 70%
+  );
+  z-index: 1;
+}
+
+.ferrari-section .featured-car-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
 }
 
 .ferrari-title {
-  background: linear-gradient(90deg, #ff2800, #d9d9d9);
+  background: linear-gradient(90deg, #fff, #d9d9d9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  text-shadow: 0 2px 10px rgba(255, 40, 0, 0.15);
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
