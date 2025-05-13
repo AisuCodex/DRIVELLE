@@ -1,3 +1,4 @@
+/* Root and App Container */
 #root {
   width: 100%;
   margin: 0;
@@ -424,70 +425,11 @@
     drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
   transform: scale(1.5);
 }
-
-/* Featured Car Section */
+/* Featured Car Section - Common Styles */
 .featured-car {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   padding: 0;
   margin: 0;
-}
-
-/* Bugatti Section Specific Styles */
-.bugatti-section {
-  background: linear-gradient(135deg, #ae0e13 0%, #7a0a0e 100%);
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh; /* Make it cover the full viewport height */
-  display: flex;
-  align-items: center;
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-}
-
-.bugatti-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-    circle at 30% 50%,
-    rgba(174, 14, 19, 0.8) 0%,
-    rgba(0, 0, 0, 0.5) 70%
-  );
-  z-index: 1;
-}
-
-.bugatti-section .featured-car-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 100%;
-  height: 110vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 2%;
-}
-
-.bugatti-section h2 {
-  background: linear-gradient(90deg, #fff, #d9d9d9);
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
-}
-
-.bugatti-section .gallery-button {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.bugatti-section .gallery-button:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .featured-car-content {
@@ -498,56 +440,6 @@
   margin: 0 auto;
   padding: 0 2rem;
   height: 100vh;
-}
-
-.bugattiLaVoiture-image {
-  flex: 2;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
-  overflow: visible;
-}
-
-.Ferrari-image {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px; /* Additional spacing to move Ferrari image lower */
-  overflow: visible;
-  height: 100vh;
-}
-
-.bugattiLaVoiture-image img {
-  max-width: 120%;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
-  transition: transform 0.5s ease, filter 0.5s ease;
-  max-height: 100vh;
-  margin-left: -15%;
-  z-index: 5;
-}
-.Ferrari-image img {
-  max-width: 105%;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
-  transition: transform 0.5s ease, filter 0.5s ease;
-  max-height: 100vh;
-  margin-top: 70px; /* Move the Ferrari car image lower */
-  margin-left: -120px; /* Keep the Ferrari car image in the same position */
-  z-index: 5;
-}
-
-.Ferrari-image img:hover {
-  transform: scale(1.01);
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
-}
-.bugattiLaVoiture-image img:hover {
-  transform: scale(1.01);
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
 }
 
 .featured-car-info {
@@ -598,6 +490,89 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Bugatti Section Specific Styles */
+.bugatti-section {
+  background: linear-gradient(135deg, #ae0e13 0%, #7a0a0e 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.bugatti-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(174, 14, 19, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 70%
+  );
+  z-index: 1;
+}
+
+.bugatti-section .featured-car-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2%;
+}
+
+.bugatti-section h2 {
+  background: linear-gradient(90deg, #fff, #d9d9d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.bugatti-section .gallery-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bugatti-section .gallery-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.bugattiLaVoiture-image {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  overflow: visible;
+}
+
+.bugattiLaVoiture-image img {
+  max-width: 120%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s ease, filter 0.5s ease;
+  max-height: 100vh;
+  margin-left: -15%;
+  z-index: 5;
+}
+
+.bugattiLaVoiture-image img:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
+}
+
 /* Ferrari Section Specific Styles */
 .ferrari-section {
   background: linear-gradient(135deg, #d4b159 0%, #8a7339 100%);
@@ -608,18 +583,6 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-}
-
-.ferrari-section .gallery-button {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.ferrari-section .gallery-button:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .ferrari-section::before {
@@ -656,4 +619,126 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.ferrari-section .gallery-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ferrari-section .gallery-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.Ferrari-image {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  overflow: visible;
+  height: 100vh;
+}
+
+.Ferrari-image img {
+  max-width: 105%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s ease, filter 0.5s ease;
+  max-height: 100vh;
+  margin-top: 70px;
+  margin-left: -120px;
+  z-index: 5;
+}
+
+.Ferrari-image img:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
+}
+
+/* Rolls Royce Section Specific Styles */
+.rollsroyce-section {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.rollsroyce-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(44, 62, 80, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 70%
+  );
+  z-index: 1;
+}
+
+.rollsroyce-section .featured-car-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2%;
+}
+
+.rollsroyce-section h2 {
+  background: linear-gradient(90deg, #fff, #d9d9d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.rollsroyce-section .gallery-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rollsroyce-section .gallery-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.rollsroyce-image {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  overflow: visible;
+}
+
+.rollsroyce-image img {
+  max-width: 150%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s ease, filter 0.5s ease;
+  max-height: 100vh;
+  margin-left: -25%;
+  z-index: 5;
+}
+
+.rollsroyce-image img:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
 }

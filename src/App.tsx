@@ -1,4 +1,5 @@
 import './App.css';
+import ferrari812 from './assets/cars/Ferrari 812 Superfast Italian.png';
 import bugatti from './assets/cars/Bugatti img (1).png';
 import bugattiLogo from './assets/cars/Bugatti Logo.png';
 import ferrariLogo from './assets/cars/Ferrari Logo.png';
@@ -6,7 +7,7 @@ import rollsRoyceLogo from './assets/cars/Rolls Royce Logo.png';
 import bmwLogo from './assets/cars/BMW Logo.png';
 import lamborghiniLogo from './assets/cars/Lamborghini Logo.png';
 import bugattiLaVoiture from './assets/cars/Bugatti La Voiture Noire.png';
-import ferrari812 from './assets/cars/Ferrari 812 Superfast Italian.png';
+import rollsRoycePhantom from './assets/cars/Rolls Royce Phantom.png';
 
 function App() {
   return (
@@ -144,6 +145,22 @@ function App() {
           </div>
           <div className="Ferrari-image">
             <img src={ferrari812} alt="Ferrari 812 Competizione" />
+          </div>
+        </div>
+      </section>
+      {/* Featured Car Section - Rolls Royce */}
+      <section className="featured-car rollsroyce-section">
+        <div className="featured-car-content">
+          <div className="rollsroyce-image">
+            <img src={rollsRoycePhantom} alt="Rolls Royce Phantom" />
+          </div>
+          <div className="featured-car-info">
+            <h2>Rolls Royce Phantom</h2>
+            <p>
+              The epitome of automotive luxury with unparalleled craftsmanship,
+              whisper-quiet performance, and regal presence.
+            </p>
+            <button className="gallery-button">GO TO GALLERY</button>
           </div>
         </div>
       </section>
